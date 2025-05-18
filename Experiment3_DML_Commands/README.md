@@ -46,124 +46,143 @@ Used to retrieve records from a table.
 SELECT column1, column2 FROM table_name WHERE condition;
 ```
 **Question 1**
---
--- Paste Question 1 here
+
+![image](https://github.com/user-attachments/assets/20dd11b0-d1b1-4a54-bf17-8309abfb3d1b)
 
 ```sql
--- Paste your SQL code below for Question 1
+update employees
+set first_name='John'
+where department_id=80
+and commission_pct<0.35;
 ```
 
 **Output:**
 
-![Output1](output.png)
+![image](https://github.com/user-attachments/assets/1fe89747-49f5-4101-8a0c-59b95aca8b02)
 
 **Question 2**
----
--- Paste Question 2 here
+
+![image](https://github.com/user-attachments/assets/094ef05e-62c4-4f6f-8c3d-fc5056a5928f)
 
 ```sql
--- Paste your SQL code below for Question 2
+update sales
+set sell_price=sell_price*0.05+50
+where product_id=15 and sale_date='2023-01-31';
 ```
 
 **Output:**
 
-![Output2](output.png)
+![image](https://github.com/user-attachments/assets/40a2cbec-63e0-4046-866c-f4d4b05a3289)
 
 **Question 3**
----
--- Paste Question 3 here
+
+![image](https://github.com/user-attachments/assets/81c33e3b-0d4e-4cc7-9a2b-b239ef32d097)
 
 ```sql
--- Paste your SQL code below for Question 3
+update products
+set product_name='Grapefruit'
+where product_id=4;
 ```
 
 **Output:**
 
-![Output3](output.png)
+![image](https://github.com/user-attachments/assets/7c7a0803-32d1-4d0e-a5c3-6e579f0cd879)
 
 **Question 4**
----
--- Paste Question 4 here
+
+![image](https://github.com/user-attachments/assets/50f98634-3f16-4350-814e-e2ae1f11c50a)
 
 ```sql
--- Paste your SQL code below for Question 4
+UPDATE employees
+SET salary=salary*2
+WHERE department_id=20
+AND job_id LIKE'%MAN';
 ```
 
 **Output:**
 
-![Output4](output.png)
+![image](https://github.com/user-attachments/assets/ebb713d1-8c0c-42cc-89df-62b5d36a0a7b)
 
 **Question 5**
----
--- Paste Question 5 here
+
+![image](https://github.com/user-attachments/assets/7fa066f1-5bff-4268-b5a5-9f860e1704a6)
 
 ```sql
--- Paste your SQL code below for Question 5
+update Employees
+set SALARY=8000
+where EMPLOYEE_ID=105 AND SALARY<5000;
 ```
 
 **Output:**
 
-![Output5](output.png)
+![image](https://github.com/user-attachments/assets/4e3232e6-ce3a-414f-8e0c-a032a17f9229)
 
 **Question 6**
----
--- Paste Question 6 here
+
+![image](https://github.com/user-attachments/assets/5c2f2ca3-163d-400c-bcb6-055c925503e9)
 
 ```sql
--- Paste your SQL code below for Question 6
+delete from Customer
+where (GRADE>2 AND PAYMENT_AMT<(SELECT AVG(PAYMENT_AMT) FROM CUSTOMER))
+OR OUTSTANDING_AMT>8000;
 ```
 
 **Output:**
 
-![Output6](output.png)
+![image](https://github.com/user-attachments/assets/6339b72f-25c7-4a35-aab3-fea638712dd8)
 
 **Question 7**
----
--- Paste Question 7 here
+
+![image](https://github.com/user-attachments/assets/138485af-629d-41cb-bc07-e419d6509b45)
 
 ```sql
--- Paste your SQL code below for Question 7
+delete from Customer
+where CUST_CITY NOT IN ('New York') and OUTSTANDING_AMT>5000;
 ```
 
 **Output:**
 
-![Output7](output.png)
+![image](https://github.com/user-attachments/assets/e7fbfd7f-f0a2-4636-9c90-cdbf3d932087)
 
 **Question 8**
----
--- Paste Question 8 here
+
+![image](https://github.com/user-attachments/assets/85c57e45-3e29-49aa-9fb0-3445cc39324d)
 
 ```sql
--- Paste your SQL code below for Question 8
+delete from customer
+where opening_amt BETWEEN 4000 AND 6000;
 ```
 
 **Output:**
 
-![Output8](output.png)
+![image](https://github.com/user-attachments/assets/7b3463a0-ebc5-4e2e-a540-9438153e8fd2)
 
 **Question 9**
----
--- Paste Question 9 here
+
+![image](https://github.com/user-attachments/assets/edc712db-3f4a-4907-b92d-7b217583f2ff)
 
 ```sql
--- Paste your SQL code below for Question 9
+DELETE FROM Surgeries
+WHERE surgery_id=3 OR surgeon_id=4;
 ```
 
 **Output:**
 
-![Output9](output.png)
+![image](https://github.com/user-attachments/assets/ffc6e3f2-bed1-4763-8724-2002d123c9c4)
 
 **Question 10**
----
--- Paste Question 10 here
+
+![image](https://github.com/user-attachments/assets/00ae118d-2641-485c-aa5f-a8e385176a7a)
+
 
 ```sql
--- Paste your SQL code below for Question 10
+delete from Customer
+where WORKING_AREA='New York';
 ```
 
 **Output:**
 
-![Output10](output.png)
+![image](https://github.com/user-attachments/assets/ec6369d6-ec48-48cc-892f-819370ec2152)
 
 ## RESULT
 Thus, the SQL queries to implement DML commands have been executed successfully.
