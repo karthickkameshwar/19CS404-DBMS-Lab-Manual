@@ -1,35 +1,58 @@
 # Experiment 2: DDL Commands
-
-## AIM
-To study and implement DDL commands and different types of constraints.
-
-## THEORY
-
-### 1. CREATE
-Used to create a new relation (table).
-
-**Syntax:**
-```sql
-CREATE TABLE (
-  field_1 data_type(size),
-  field_2 data_type(size),
-  ...
+foreign key(EmployeeID)references Employees(EmployeeID),
+foreign key(ProjectID)references Projects(ProjectID)
 );
 ```
-### 2. ALTER
-Used to add, modify, drop, or rename fields in an existing relation.
-(a) ADD
+
+**Output:**
+
+![image](https://github.com/user-attachments/assets/d6f1fc5c-f061-4539-991b-9523a74fd219)
+
+**Question 8**
+
+![image](https://github.com/user-attachments/assets/405f7767-e115-4c61-9424-e3ba0acd99bc)
+
 ```sql
-ALTER TABLE std ADD (Address CHAR(10));
+create table Tasks(
+TaskID INTEGER,
+TaskName TEXT,
+DueDate DATE
+);
 ```
-(b) MODIFY
+
+**Output:**
+
+![image](https://github.com/user-attachments/assets/0137f4f3-3e2a-4fb6-b011-735abe10642e)
+
+**Question 9**
+
+![image](https://github.com/user-attachments/assets/a72e8aa6-dc9f-4537-9577-79e16d0a8fae)
+
 ```sql
-ALTER TABLE relation_name MODIFY (field_1 new_data_type(size));
+insert into Books(ISBN,Title,Author,Publisher,Year) values ('978-1234567890','Data Science Essentials','Jane Doe','TechBooks',2024);
 ```
-(c) DROP
+
+**Output:**
+
+![image](https://github.com/user-attachments/assets/f557b942-4863-43c4-9bd9-e8d39f2edfd8)
+
+**Question 10**
+
+![image](https://github.com/user-attachments/assets/6e68dffe-111b-4a6f-bd89-354955a95bde)
+
 ```sql
-ALTER TABLE relation_name DROP COLUMN field_name;
+create table Attendance(
+AttendanceID INTEGER primary key,
+EmployeeID INTEGER,
+AttendanceDate DATE NOT NULL,
+Status TEXT CHECK(STATUS IN('Present','Absent','Leave')),
+foreign key(EmployeeID)references Employees(EmployeeID)
+);
 ```
-(d) RENAME
-```sql
-ALTER TABLE relation_name RENAME COLUMN old_field_name TO new_field_name;
+
+**Output:**
+
+![image](https://github.com/user-attachments/assets/1c807311-9fa3-4dae-8267-9d65c408c13e)
+
+## RESULT
+Thus, the SQL queries to implement different types of constraints and DDL commands have been executed successfully.
