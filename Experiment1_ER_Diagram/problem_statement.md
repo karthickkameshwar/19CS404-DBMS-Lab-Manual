@@ -1,4 +1,22 @@
 # Experiment 1: Entity-Relationship (ER) Diagram
+
+## 🎯 Objective:
+To understand and apply the concepts of ER modeling by creating an ER diagram for a real-world application.
+
+## 📚 Purpose:
+The purpose of this workshop is to gain hands-on experience in designing ER diagrams that visually represent the structure of a database including entities, relationships, attributes, and constraints.
+
+---
+
+## 🧪 Choose One Scenario:
+
+### 🔹 Scenario 1: University Database
+Design a database to manage students, instructors, programs, courses, and student enrollments. Include prerequisites for courses.
+
+**User Requirements:**
+- Academic programs grouped under departments.
+- Students have admission number, name, DOB, contact info.
+- Instructors with staff number, contact info, etc.
 - Courses have number, name, credits.
 - Track course enrollments by students and enrollment date.
 - Add support for prerequisites (some courses require others).
@@ -27,55 +45,12 @@ Design a database for patient management, appointments, medical records, and bil
    - Why you chose the entities and relationships.
    - How you modeled prerequisites or billing.
 
-# ER Diagram Submission - Oviya K P
+# ER Diagram Submission - Student Name
 
 ## Scenario Chosen:
-University
-The ER diagram models a university’s information system, focusing on students, their login credentials, course enrollments, college details, and ERP (Enterprise Resource Planning) integration.
+University / Hospital (choose one)
 
 ## ER Diagram:
-![image](https://github.com/user-attachments/assets/efdd6f06-05df-48a8-95ab-ba6e94e8dc6e)
-
+![Screenshot (69)](https://github.com/user-attachments/assets/087ed14f-fc84-434f-823e-174b3ec856e8)
 
 ## Entities and Attributes:
-1. Student
-Attributes:
-   - First Name, Last Name: Basic personal identification.
-   - (Name): Composite attribute combining First and Last Name.
-   - Age: Optional (dashed line), possibly derived from Date of Birth.
-   - Date of Birth: For age calculation and identification.
-   - Address: Student’s residential information
-   - Email: For communication and login.
-   - Phone: Contact number.
-
-2. Login
-Attributes:
-   - Register Number: Unique identifier for login.
-   - Email ID: Used for login and communication.
-   - Password: For authentication.
-       
-3. Courses
-Attributes:
-   - Course Name: Name of the course.
-   - Course Code: Unique code for each course.
-   - Department: Department offering the course.
-   - (Staff): Composite attribute for staff details:
-   - Phone: Staff contact.
-   - Faculty Name: Name of the instructor.
-   - Teacher ID: Unique staff identifier.
-
-4. College
-Attributes:
-   - College Name: Name of the college.
-   - College Code: Unique college identifier.
-
-5. ERP
-No explicit attributes shown, represents the university’s ERP system.
-...
-
-## Relationships and Constraints:
-1. Student - Login (Has)
-   - Cardinality: One-to-one (each student has one login).
-   - Participation: Total (every student must have a login).
-
-2. Login - Courses (Enroll)
